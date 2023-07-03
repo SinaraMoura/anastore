@@ -1,0 +1,14 @@
+{
+  "name": "anastore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sinara Tibel de Moura Mendes",
+  "license": "ISC",
+  "dependencies": {
+    "react-router-dom": "^6.14.1"
+  }
+}

@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    color: #444e5e;
+    font-weight: 400;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #444e5e;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+main {
+    position: relative;
+}
+
+.header {
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.conteiner {
+    height: 100%;
+}
+
+.footer {
+    background-color: rgb(239, 241, 243);
+    height: 62px;
+    width: 100%;
+}
+
+.paragrafo {
+    font-size: 14px;
+}
+
+.ibarra-real {
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+.public-sans {
+    font-family: 'Public Sans', sans-serif;
+}
+
+.blueCyan {
+    color: #444e5e;
+}
+
+.rose {
+    color: #ce7da5;
+}
+
+.grey {
+    color: #a9b1be;
+}

@@ -1,0 +1,20 @@
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+.transform {
+    transform: scaleX(-1);
+}
+
+.input {
+    all: unset;
+    height: 46px;
+    width: 200px;
+}
+
+input::placeholder {
+    color: #444e5e;
+    opacity: 50%;
+    font-family: 'Public Sans', sans-serif;
+}
