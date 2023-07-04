@@ -3,7 +3,7 @@ import logo from '../../assets/logo.jpg';
 
 function Header() {
     return (
-        <>
+        <section className='border'>
             <header className='header flex align-center p-12 mr-ml-100'>
                 <div className="icon-search mr-20">
                     <img className="icon transform mr-10 " src={search} alt="icone de busca" />
@@ -12,7 +12,7 @@ function Header() {
 
                 <img className="logo mb-16 ml-30p" src={logo} alt="logo" />
             </header>
-        </>
+        </section>
     )
 }
 

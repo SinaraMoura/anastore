@@ -3,11 +3,12 @@
     height: 100%;
 }
 
-.categories {
-    border-bottom: 2px solid #e8e9ea;
-}
-
 .img {
     width: 25px;
     height: 25px;
+}
+
+.coluna-maior {
+    width: 854px;
+    height: 100%;
 }

@@ -63,7 +63,6 @@ input::placeholder {
 
 .header {
     line-height: 90px;
-    border-bottom: 2px solid #e8e9ea;
 }
 
 .logo {
@@ -73,6 +72,10 @@ input::placeholder {
 
 .conteiner {
     height: 100%;
+}
+
+.border {
+    border-bottom: 2px solid #d9dce2;
 }
 
 .footer {

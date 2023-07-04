@@ -1,10 +1,19 @@
+import Card from '../cards';
 import iconLocation from '../../assets/icon-location.png';
+import brincoGota from '../../assets/brincos/brinco-gota.jpg';
+import brincoTriplo from '../../assets/brincos/brinco-triplo.jpg';
+import girrasol from '../../assets/colares/colar-girrasol.jpg';
+import olho from '../../assets/colares/colar-olho-grego.jpg';
+import tartaruga from '../../assets/pulseiras/pulseira-tartaruga.jpg';
+import perolas from '../../assets/pulseiras/pulseira-perolas.jpg';
+import azul from '../../assets/conjuntos/conjunto-brilhante-azul.jpg';
+import branco from '../../assets/conjuntos/conjunto-brilhante-branco.jpg'
 import './styles.css';
 function Main() {
     return (
-        <main>
+        <main className='flex'>
             <section className='coluna-menor p-20-10 mr-ml-100'>
-                <div className='categories pb-10'>
+                <div className='border pb-10'>
                     <h3 className='mb-25 ibarra-real'>Categorias</h3>
                     <nav className='categories-list mb-40'>
                         <ul className='flex column pl-30 gap-25'>
@@ -75,6 +84,76 @@ function Main() {
                             </a>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section className='coluna-maior p-12 public-sans'>
+                <div>
+                    <h2 className='mb-20 ibarra-real'>Brincos</h2>
+
+                    <Card
+                        img={brincoGota}
+                        desc='Brinco Gota'
+                        categorie='Brincos'
+                        price='R$ 30,00'
+                    />
+
+                    <Card
+                        img={brincoTriplo}
+                        desc='Brinco Triplo'
+                        categorie='brincos'
+                        price='R$ 60,00'
+                    />
+                </div>
+                <div>
+                    <h2 className='mb-20 ibarra-real'>Colares</h2>
+
+                    <Card
+                        img={girrasol}
+                        desc='Chocker Girrasol'
+                        categorie='Colares'
+                        price='R$ 35,00'
+                    />
+
+                    <Card
+                        img={olho}
+                        desc='Colar Olho Grego'
+                        categorie='Colares'
+                        price='R$ 60,00'
+                    />
+                </div>
+                <div>
+                    <h2 className='mb-20 ibarra-real'>Pulseiras</h2>
+
+                    <Card
+                        img={tartaruga}
+                        desc='Pulseira Tartaruga'
+                        categorie='Pulseira'
+                        price='R$ 30,00'
+                    />
+
+                    <Card
+                        img={perolas}
+                        desc='Pulseira Perolas'
+                        categorie='Pulseira'
+                        price='R$ 80,00'
+                    />
+                </div>
+                <div>
+                    <h2 className='mb-20 ibarra-real'>Conjuntos</h2>
+
+                    <Card
+                        img={azul}
+                        desc='Kit Brilhantes Azul'
+                        categorie='Conjuntos'
+                        price='R$ 85,00'
+                    />
+
+                    <Card
+                        img={branco}
+                        desc='Kit Brilhante Branco'
+                        categorie='Conjuntos'
+                        price='R$ 85,00'
+                    />
                 </div>
             </section>
         </main>
