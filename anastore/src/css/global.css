@@ -11,6 +11,19 @@ body {
     font-weight: 400;
 }
 
+h2,
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+li {
+    cursor: pointer;
+}
+
 ul {
     list-style-type: none;
 }
@@ -24,12 +37,33 @@ a {
 
 }
 
-main {
-    position: relative;
+
+
+input {
+    all: unset;
+    height: 50px;
+    border: 1px solid #e8e9ea;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: #444e5e;
+    opacity: 50%;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+.transform {
+    transform: scaleX(-1);
 }
 
 .header {
-    border-bottom: 1px solid black;
+    line-height: 90px;
+    border-bottom: 2px solid #e8e9ea;
 }
 
 .logo {
@@ -42,8 +76,9 @@ main {
 }
 
 .footer {
+    position: relative;
     background-color: rgb(239, 241, 243);
-    height: 62px;
+    height: 300px;
     width: 100%;
 }
 

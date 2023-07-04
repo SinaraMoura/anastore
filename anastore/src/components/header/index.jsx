@@ -1,18 +1,16 @@
 import search from '../../assets/icon-search.png';
 import logo from '../../assets/logo.jpg';
-import './styles.css'
+
 function Header() {
     return (
         <>
-            <header className='header flex p-12 align-center mr-ml-100'>
-                <div className="icon-search">
-                    <img className="icon transform" src={search} alt="icone de busca" />
+            <header className='header flex align-center p-12 mr-ml-100'>
+                <div className="icon-search mr-20">
+                    <img className="icon transform mr-10 " src={search} alt="icone de busca" />
+                    <input className="input p-input box" type="text" placeholder="O que você procura?" />
                 </div>
 
-                <input className="input p-input box" type="text" placeholder="O que você procura?" />
-                <div className="logomarca ml-250 ">
-                    <a href="#"><img className="logo" src={logo} alt="logo" /></a>
-                </div>
+                <img className="logo mb-16 ml-30p" src={logo} alt="logo" />
             </header>
         </>
     )
