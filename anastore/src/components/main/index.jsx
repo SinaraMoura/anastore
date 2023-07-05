@@ -9,6 +9,7 @@ import perolas from '../../assets/pulseiras/pulseira-perolas.jpg';
 import azul from '../../assets/conjuntos/conjunto-brilhante-azul.jpg';
 import branco from '../../assets/conjuntos/conjunto-brilhante-branco.jpg'
 import './styles.css';
+import Scroll from '../scroll';
 function Main() {
     return (
         <main className='flex'>
@@ -156,6 +157,7 @@ function Main() {
                     />
                 </div>
             </section>
+            <Scroll />
         </main>
     )
 }
