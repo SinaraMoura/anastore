@@ -1,7 +1,6 @@
 import iconLocation from '../../assets/icon-location.png';
 function NavBar({ produtos, setProdutos }) {
     function lowestPrice() {
-
         const localeProdutos = [...produtos];
         const newProducts = localeProdutos.map(item => {
             return {
@@ -19,6 +18,30 @@ function NavBar({ produtos, setProdutos }) {
             return {
                 ...item, produtos: item.produtos.sort((a, b) => {
                     return b.price.localeCompare(a.price);
+                })
+            }
+        });
+
+        setProdutos(newProducts);
+    }
+    function ascendingOrder() {
+        const localeProdutos = [...produtos];
+        const newProducts = localeProdutos.map(item => {
+            return {
+                ...item, produtos: item.produtos.sort((a, b) => {
+                    return a.desc.localeCompare(b.desc);
+                })
+            }
+        });
+
+        setProdutos(newProducts);
+    }
+    function descendingOrder() {
+        const localeProdutos = [...produtos];
+        const newProducts = localeProdutos.map(item => {
+            return {
+                ...item, produtos: item.produtos.sort((a, b) => {
+                    return b.desc.localeCompare(a.desc);
                 })
             }
         });
@@ -45,8 +68,8 @@ function NavBar({ produtos, setProdutos }) {
                             <li>Categorias</li>
                             <li onClick={lowestPrice}>Menor preço</li>
                             <li onClick={biggestPrice}>Maior preço</li>
-                            <li>A-Z</li>
-                            <li>Z-A</li>
+                            <li onClick={ascendingOrder}>A-Z</li>
+                            <li onClick={descendingOrder}>Z-A</li>
                         </ul>
                     </nav>
                 </div>
