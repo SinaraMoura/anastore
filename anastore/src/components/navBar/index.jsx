@@ -13,6 +13,18 @@ function NavBar({ produtos, setProdutos }) {
 
         setProdutos(newProducts);
     }
+    function biggestPrice() {
+        const localeProdutos = [...produtos];
+        const newProducts = localeProdutos.map(item => {
+            return {
+                ...item, produtos: item.produtos.sort((a, b) => {
+                    return b.price.localeCompare(a.price);
+                })
+            }
+        });
+
+        setProdutos(newProducts);
+    }
     return (
         <>
             <section className='coluna-menor p-20-10 mr-ml-100'>
@@ -32,7 +44,7 @@ function NavBar({ produtos, setProdutos }) {
                         <ul className='flex column pl-30 gap-25'>
                             <li>Categorias</li>
                             <li onClick={lowestPrice}>Menor preço</li>
-                            <li>Maior preço</li>
+                            <li onClick={biggestPrice}>Maior preço</li>
                             <li>A-Z</li>
                             <li>Z-A</li>
                         </ul>

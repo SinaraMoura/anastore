@@ -13,17 +13,17 @@ const database = [
         sessao: 'Brincos',
         produtos: [
             {
-                id: 'brinco01',
+                id: 'b01',
                 img: brincoGota,
                 desc: 'Brinco Gota',
                 categorie: 'colares',
-                price: 'R$ 70,00'
+                price: 'R$ 30,00'
             },
             {
-                id: 'brinco02',
+                id: 'b02',
                 img: brincoTriplo,
                 desc: 'Brinco Triplo',
-                categorie: 'categorie',
+                categorie: 'colares',
                 price: 'R$ 60,00'
             }
         ]
@@ -37,14 +37,54 @@ const database = [
                 img: girrasol,
                 desc: 'Colar Girrasol',
                 categorie: 'colares',
-                price: 'R$ 70,00'
+                price: 'R$ 35,00'
             },
             {
                 id: 'c02',
-                img: tartaruga,
-                desc: 'Colar Tartaruga',
-                categorie: 'categorie',
+                img: olho,
+                desc: 'Colar Olho Grego',
+                categorie: 'colares',
                 price: 'R$ 60,00'
+            }
+        ]
+    },
+    {
+        id: 3,
+        sessao: 'Pulseiras',
+        produtos: [
+            {
+                id: 'p01',
+                img: tartaruga,
+                desc: 'Pulseira Tartaruga',
+                categorie: 'pulseiras',
+                price: 'R$ 30,00'
+            },
+            {
+                id: 'p02',
+                img: perolas,
+                desc: 'Pulseira Perolas',
+                categorie: 'pulseiras',
+                price: 'R$ 80,00'
+            }
+        ]
+    },
+    {
+        id: 3,
+        sessao: 'Conjuntos',
+        produtos: [
+            {
+                id: 'cj01',
+                img: branco,
+                desc: 'Kit Brilhante Branco',
+                categorie: 'kit',
+                price: 'R$ 100,00'
+            },
+            {
+                id: 'cj02',
+                img: azul,
+                desc: 'Kit Brilhante Azul',
+                categorie: 'kit',
+                price: 'R$ 85,00'
             }
         ]
     }
