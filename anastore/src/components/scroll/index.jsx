@@ -7,7 +7,6 @@ function Scroll() {
 
     function rolar() {
         setPageYPosition(window.scrollY);
-
     }
 
     return (
