@@ -1,5 +1,45 @@
+import { useState } from 'react';
 import iconLocation from '../../assets/icon-location.png';
 function NavBar({ produtos, setProdutos }) {
+    const [checked, setChecked] = useState(true);
+
+    function showAll() {
+        const localeProdutos = [...produtos];
+        setProdutos(localeProdutos);
+    }
+
+    function earring() {
+        const localeProdutos = [...produtos];
+        const newProducts = localeProdutos.filter(item => {
+            return item.sessao.toLowerCase().includes('brincos'.toLowerCase());
+        });
+
+        setProdutos(newProducts);
+    }
+    function necklaces() {
+        const localeProdutos = [...produtos];
+        const newProducts = localeProdutos.filter(item => {
+            return item.sessao.toLowerCase().includes('colares'.toLowerCase());
+        });
+
+        setProdutos(newProducts);
+    }
+    function bracelets() {
+        const localeProdutos = [...produtos];
+        const newProducts = localeProdutos.filter(item => {
+            return item.sessao.toLowerCase().includes('pulseiras'.toLowerCase());
+        });
+
+        setProdutos(newProducts);
+    }
+    function kits() {
+        const localeProdutos = [...produtos];
+        const newProducts = localeProdutos.filter(item => {
+            return item.sessao.toLowerCase().includes('conjuntos'.toLowerCase());
+        });
+
+        setProdutos(newProducts);
+    }
     function lowestPrice() {
         const localeProdutos = [...produtos];
         const newProducts = localeProdutos.map(item => {
@@ -53,12 +93,14 @@ function NavBar({ produtos, setProdutos }) {
             <section className='coluna-menor p-20-10 mr-ml-100'>
                 <div className='border pb-10'>
                     <h3 className='mb-25 ibarra-real'>Categorias</h3>
+
                     <nav className='categories-list mb-40'>
                         <ul className='flex column pl-30 gap-25'>
-                            <li>Brincos</li>
-                            <li>Colares</li>
-                            <li>Pulseiras</li>
-                            <li>Conjuntos</li>
+                            <li onClick={showAll}>Tudo</li>
+                            <li onClick={earring}>Brincos</li>
+                            <li onClick={necklaces}>Colares</li>
+                            <li onClick={bracelets}>Pulseiras</li>
+                            <li onClick={kits}>Conjuntos</li>
                         </ul>
                     </nav>
 
