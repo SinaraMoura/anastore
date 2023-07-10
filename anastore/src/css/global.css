@@ -21,6 +21,7 @@ h4 {
 }
 
 li {
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -36,8 +37,6 @@ a {
     font-weight: bold;
 
 }
-
-
 
 input {
     all: unset;
