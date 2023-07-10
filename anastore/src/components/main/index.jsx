@@ -6,14 +6,22 @@ import { useContext } from 'react';
 import UserContext from '../../context/UserContext';
 import NavBar from '../navBar';
 import database from '../../database';
+import Payment from '../payment';
+import img from '../../assets/brincos/brinco-gota.jpg'
 
 function Main() {
-    const [produtos, setProdutos] = useState(database);
-    const { valueInput } = useContext(UserContext);
+    // const [produtos, setProdutos] = useState(database);
+    // const { valueInput } = useContext(UserContext);
 
     return (
         <main className='flex'>
-            <NavBar
+            <Payment
+                img={img}
+                categorie='brincos'
+                desc='Brinco Gota'
+                price='R$ 45,00'
+            />
+            {/* <NavBar
                 produtos={produtos}
                 setProdutos={setProdutos}
             />
@@ -43,7 +51,7 @@ function Main() {
                     })
                 }
             </section>
-            <Scroll />
+            <Scroll /> */}
         </main>
     )
 }

@@ -84,12 +84,20 @@ input::placeholder {
     width: 100%;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .paragrafo {
     font-size: 14px;
 }
 
 .ibarra-real {
     font-family: 'Ibarra Real Nova', serif;
+}
+
+.grafik {
+    font-family: Graphik;
 }
 
 .public-sans {

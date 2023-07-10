@@ -1,4 +1,3 @@
-import { data } from 'jquery';
 import { useState } from 'react';
 import iconLocation from '../../assets/icon-location.png';
 import database from '../../database';
