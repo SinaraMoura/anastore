@@ -1,15 +1,18 @@
+import { data } from 'jquery';
 import { useState } from 'react';
 import iconLocation from '../../assets/icon-location.png';
+import database from '../../database';
+
 function NavBar({ produtos, setProdutos }) {
     const [checked, setChecked] = useState(true);
 
     function showAll() {
-        const localeProdutos = [...produtos];
+        const localeProdutos = database;
         setProdutos(localeProdutos);
     }
 
     function earring() {
-        const localeProdutos = [...produtos];
+        const localeProdutos = database;
         const newProducts = localeProdutos.filter(item => {
             return item.sessao.toLowerCase().includes('brincos'.toLowerCase());
         });
@@ -17,7 +20,7 @@ function NavBar({ produtos, setProdutos }) {
         setProdutos(newProducts);
     }
     function necklaces() {
-        const localeProdutos = [...produtos];
+        const localeProdutos = database;
         const newProducts = localeProdutos.filter(item => {
             return item.sessao.toLowerCase().includes('colares'.toLowerCase());
         });
@@ -25,7 +28,7 @@ function NavBar({ produtos, setProdutos }) {
         setProdutos(newProducts);
     }
     function bracelets() {
-        const localeProdutos = [...produtos];
+        const localeProdutos = database;
         const newProducts = localeProdutos.filter(item => {
             return item.sessao.toLowerCase().includes('pulseiras'.toLowerCase());
         });
@@ -33,7 +36,7 @@ function NavBar({ produtos, setProdutos }) {
         setProdutos(newProducts);
     }
     function kits() {
-        const localeProdutos = [...produtos];
+        const localeProdutos = database;
         const newProducts = localeProdutos.filter(item => {
             return item.sessao.toLowerCase().includes('conjuntos'.toLowerCase());
         });
