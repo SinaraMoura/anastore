@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import UserContext from '../../context/UserContext';
 import NavBar from '../navBar';
 import database from '../../database';
-import Payment from '../payment';
+import Order from '../order';
 import img from '../../assets/brincos/brinco-gota.jpg'
 
 function Main() {
@@ -15,7 +15,7 @@ function Main() {
 
     return (
         <main className='flex'>
-            <Payment
+            <Order
                 img={img}
                 categorie='brincos'
                 desc='Brinco Gota'

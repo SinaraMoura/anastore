@@ -1,5 +1,5 @@
 import './styles.css';
-function Payment({ img, categorie, desc, price }) {
+function Order({ img, categorie, desc, price }) {
     return (
         <>
             <div className="payment flex space-around p-15 mt-20 grafik">
@@ -24,4 +24,4 @@ function Payment({ img, categorie, desc, price }) {
     )
 }
 
-export default Payment
+export default Order
