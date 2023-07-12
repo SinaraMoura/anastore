@@ -1,8 +1,8 @@
 import './styles.css'
-function Card({ img, desc, categorie, price }) {
+function Card({ img, desc, categorie, price, onclick }) {
 
     return (
-        <div className="produto-item flex hover-produto">
+        <div className="produto-item flex hover-produto" onClick={onclick}>
             <div className="p-12">
                 <a href=''>
                     <img className="img-coluna-maior" src={img} />

@@ -1,9 +1,14 @@
+import { useContext } from 'react';
+import UserContext from '../../context/UserContext'
+import Header from '../header';
 import './styles.css';
-function Order({ img, categorie, desc, price }) {
+function OrderCard() {
+    const { img, categorie, desc, price } = useContext(UserContext);
     return (
         <>
+            <Header />
             <div className="payment flex space-around p-15 mt-20 grafik">
-                <div className='img-pay'></div>
+                <div className=''>{img}</div>
                 <div className='info-pay flex column between'>
                     <div>
                         <p className='categorie-pay uppercase'>{categorie}</p>
@@ -24,4 +29,4 @@ function Order({ img, categorie, desc, price }) {
     )
 }
 
-export default Order
+export default OrderCard
