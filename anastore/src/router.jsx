@@ -10,7 +10,11 @@ export default function MainRouter() {
     const [price, setPrice] = useState('');
     const [categorie, setCategorie] = useState('');
     const [img, setImg] = useState('');
-    const valuesProviders = { valueInput, setValueInput, desc, setDesc, categorie, setCategorie, price, setPrice, img, setImg };
+    const [componentRender, setComponentRender] = useState(false);
+    const valuesProviders = {
+        valueInput, setValueInput, desc, setDesc, categorie,
+        setCategorie, price, setPrice, img, setImg, componentRender, setComponentRender
+    };
 
     return (
         <UserContext.Provider value={valuesProviders}>

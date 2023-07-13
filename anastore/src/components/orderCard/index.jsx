@@ -4,11 +4,15 @@ import Header from '../header';
 import './styles.css';
 function OrderCard() {
     const { img, categorie, desc, price } = useContext(UserContext);
+    const message = 'Olá, gostaria de fazer um pedido da sua loja.';
+
     return (
         <>
             <Header />
             <div className="payment flex space-around p-15 mt-20 grafik">
-                <div className=''>{img}</div>
+                <div className='img-pay'>
+                    <img src={img} alt="" />
+                </div>
                 <div className='info-pay flex column between'>
                     <div>
                         <p className='categorie-pay uppercase'>{categorie}</p>
@@ -16,11 +20,11 @@ function OrderCard() {
                         <p className='price-pay border'>{price}</p>
                     </div>
 
-                    <a className='button flex align-center justify-content' href="https://web.whatsapp.com/send?phone=5563992139582" target="_blank">
+                    <a className='button ' href={`https://wa.me/556163992139582?text=+${message}`} target="_blank">
                         <img className="img"
                             src="https://i.pinimg.com/originals/d9/d9/7d/d9d97d48264770f85d35c208f279152c.png"
                             alt="icone whatsapp" />
-                        Pedir por WhatsApp
+                        PEDIR POR WHATSAPP
                     </a>
                 </div>
 

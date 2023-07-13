@@ -17,13 +17,15 @@ import { useNavigate } from 'react-router-dom';
 function Main() {
     const navigate = useNavigate()
     const [produtos, setProdutos] = useState(database);
-    const { valueInput, setImg, setDesc, setCategorie, setPrice } = useContext(UserContext);
+    const { valueInput, setImg, setDesc, setCategorie, setPrice, setComponentRender } = useContext(UserContext);
 
     function clickCard(card) {
         setImg(card.img);
         setCategorie(card.categorie);
         setDesc(card.desc);
         setPrice(card.price);
+
+        setComponentRender(true);
         navigate('/order')
     }
 
