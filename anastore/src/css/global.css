@@ -11,6 +11,10 @@ body {
     font-weight: 400;
 }
 
+header {
+    width: 50%;
+}
+
 h2,
 h3 {
     font-size: 20px;
@@ -40,7 +44,7 @@ a {
 
 input {
     all: unset;
-    height: 50px;
+    height: 30px;
     border: 1px solid #e8e9ea;
     border-radius: 5px;
 }
@@ -49,6 +53,10 @@ input::placeholder {
     color: #444e5e;
     opacity: 50%;
     font-family: 'Public Sans', sans-serif;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 .icon {
@@ -84,12 +92,20 @@ input::placeholder {
     width: 100%;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .paragrafo {
     font-size: 14px;
 }
 
 .ibarra-real {
     font-family: 'Ibarra Real Nova', serif;
+}
+
+.grafik {
+    font-family: Graphik;
 }
 
 .public-sans {

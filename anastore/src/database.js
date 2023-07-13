@@ -16,14 +16,14 @@ const database = [
                 id: 'b01',
                 img: brincoGota,
                 desc: 'Brinco Gota',
-                categorie: 'colares',
+                categorie: 'brincos',
                 price: 'R$ 30,00'
             },
             {
                 id: 'b02',
                 img: brincoTriplo,
                 desc: 'Brinco Triplo',
-                categorie: 'colares',
+                categorie: 'brincos',
                 price: 'R$ 60,00'
             }
         ]
