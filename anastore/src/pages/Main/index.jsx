@@ -1,7 +1,7 @@
 import Card from '../../components/cards'
 import './styles.css';
 import Scroll from '../../components/scroll';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import UserContext from '../../context/UserContext';
 import NavBar from '../../components/navBar';
@@ -13,6 +13,8 @@ import '../../css/layout.css';
 import '../../css/spacing.css';
 import '../../App.css';
 import { useNavigate } from 'react-router-dom';
+import { client, api } from '../../service/api';
+import { toast } from "react-toastify";
 
 function Main() {
     const navigate = useNavigate()
@@ -28,6 +30,19 @@ function Main() {
         setComponentRender(true);
         navigate('/order')
     }
+
+    // useEffect(() => {
+    //     async function handleInitial() {
+    //         try {
+    //             const responseProducts = await api.get('products', { client });
+    //             console.log(responseProducts)
+    //         } catch (error) {
+    //             console.log(error?.response?.data?.message)
+    //             // toast.error(error?.response?.data?.message);
+    //         }
+    //     }
+    //     handleInitial()
+    // }, [])
 
     return (
         <main className='main flex column'>
