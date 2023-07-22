@@ -1,52 +1,52 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import iconLocation from '../../assets/icon-location.png';
-import database from '../../database';
+import UserContext from '../../context/UserContext';
 
-function NavBar({ produtos, setProdutos }) {
-    const [checked, setChecked] = useState(true);
+function NavBar({ setProdutos }) {
+    const { allProducts } = useContext(UserContext);
 
     function showAll() {
-        const localeProdutos = database;
+        const localeProdutos = allProducts;
         setProdutos(localeProdutos);
     }
 
     function earring() {
-        const localeProdutos = database;
+        const localeProdutos = allProducts;
         const newProducts = localeProdutos.filter(item => {
-            return item.sessao.toLowerCase().includes('brincos'.toLowerCase());
+            return item.secao.toLowerCase().includes('brincos'.toLowerCase());
         });
 
         setProdutos(newProducts);
     }
     function necklaces() {
-        const localeProdutos = database;
+        const localeProdutos = allProducts;
         const newProducts = localeProdutos.filter(item => {
-            return item.sessao.toLowerCase().includes('colares'.toLowerCase());
+            return item.secao.toLowerCase().includes('colares'.toLowerCase());
         });
 
         setProdutos(newProducts);
     }
     function bracelets() {
-        const localeProdutos = database;
+        const localeProdutos = allProducts;
         const newProducts = localeProdutos.filter(item => {
-            return item.sessao.toLowerCase().includes('pulseiras'.toLowerCase());
+            return item.secao.toLowerCase().includes('pulseiras'.toLowerCase());
         });
 
         setProdutos(newProducts);
     }
     function kits() {
-        const localeProdutos = database;
+        const localeProdutos = allProducts;
         const newProducts = localeProdutos.filter(item => {
-            return item.sessao.toLowerCase().includes('conjuntos'.toLowerCase());
+            return item.secao.toLowerCase().includes('conjuntos'.toLowerCase());
         });
 
         setProdutos(newProducts);
     }
     function lowestPrice() {
-        const localeProdutos = [...produtos];
+        const localeProdutos = [...allProducts];
         const newProducts = localeProdutos.map(item => {
             return {
-                ...item, produtos: item.produtos.sort((a, b) => {
+                ...item, produtos: item.products.sort((a, b) => {
                     return a.price.localeCompare(b.price);
                 })
             }
@@ -55,10 +55,10 @@ function NavBar({ produtos, setProdutos }) {
         setProdutos(newProducts);
     }
     function biggestPrice() {
-        const localeProdutos = [...produtos];
+        const localeProdutos = [...allProducts];
         const newProducts = localeProdutos.map(item => {
             return {
-                ...item, produtos: item.produtos.sort((a, b) => {
+                ...item, produtos: item.products.sort((a, b) => {
                     return b.price.localeCompare(a.price);
                 })
             }
@@ -67,10 +67,10 @@ function NavBar({ produtos, setProdutos }) {
         setProdutos(newProducts);
     }
     function ascendingOrder() {
-        const localeProdutos = [...produtos];
+        const localeProdutos = [...allProducts];
         const newProducts = localeProdutos.map(item => {
             return {
-                ...item, produtos: item.produtos.sort((a, b) => {
+                ...item, produtos: item.products.sort((a, b) => {
                     return a.desc.localeCompare(b.desc);
                 })
             }
@@ -79,10 +79,10 @@ function NavBar({ produtos, setProdutos }) {
         setProdutos(newProducts);
     }
     function descendingOrder() {
-        const localeProdutos = [...produtos];
+        const localeProdutos = [...allProducts];
         const newProducts = localeProdutos.map(item => {
             return {
-                ...item, produtos: item.produtos.sort((a, b) => {
+                ...item, produtos: item.products.sort((a, b) => {
                     return b.desc.localeCompare(a.desc);
                 })
             }
