@@ -21,7 +21,7 @@ export default function MainRouter() {
     useEffect(() => {
         const fetchPrismic = async () => {
             try {
-                const response = await fetch('https://anastore.prismic.io/api/v2/documents/search?ref=ZLwRHhIAACMA39Du');
+                const response = await fetch('https://anastore.prismic.io/api/v2/documents/search?ref=ZL6kThIAACQA6yr2');
                 const jsonData = await response.json();
                 const formattedData = jsonData.results.map(item => ({
                     id: item.uid,

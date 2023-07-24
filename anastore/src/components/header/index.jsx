@@ -4,7 +4,7 @@ import back from '../../assets/back.png';
 import logo from '../../assets/logo.jpg';
 import UserContext from '../../context/UserContext';
 import { useNavigate } from 'react-router-dom';
-
+import './styles.css';
 function Header() {
     const navigate = useNavigate();
     const { valueInput, setValueInput, componentRender, setComponentRender } = useContext(UserContext);
@@ -21,13 +21,13 @@ function Header() {
     }
 
     return (
-        <section className='border'>
-            <header className='header flex between align-center p-12 mr-ml-100'>
+        <section className='section-header '>
+            <header className='header flex between align-center p-12'>
                 <div className="header-icon flex align-center justify-content mr-20" onClick={clickBack}>
                     {componentRender ?
                         <img className="icon mr-10 pointer " src={back} alt="icone de busca" />
                         :
-                        <img className="icon transform mr-10 " src={search} alt="icone de busca" />
+                        <img className="seach icon transform mr-10 " src={search} alt="icone de busca" />
                     }
                     {componentRender ?
                         <p className='pointer'>Voltar</p>
@@ -38,7 +38,7 @@ function Header() {
 
                 </div>
 
-                <img className="logo mb-16 ml-30p" src={logo} alt="logo" />
+                <img className="logo mb-16 " src={logo} alt="logo" />
             </header>
         </section>
     )

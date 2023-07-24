@@ -5,6 +5,8 @@
 .coluna-menor {
     width: 260px;
     height: 100%;
+
+
 }
 
 .img {
@@ -13,6 +15,27 @@
 }
 
 .coluna-maior {
-    width: 854px;
+    width: 100%;
     height: 100%;
+
+}
+
+.card-produtos {
+    display: flex;
+    width: 100%
+}
+
+@media screen and (max-width: 735px) {
+    .coluna-menor {
+        width: 200px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .card-produtos {
+        display: block;
+    }
+
 }

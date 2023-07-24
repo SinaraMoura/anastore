@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import iconLocation from '../../assets/icon-location.png';
 import UserContext from '../../context/UserContext';
-
+import './styles.css'
 function NavBar({ setProdutos }) {
     const { allProducts } = useContext(UserContext);
 
@@ -92,7 +92,7 @@ function NavBar({ setProdutos }) {
     }
     return (
         <>
-            <section className='coluna-menor p-20-10 mr-ml-100'>
+            <section className='coluna-menor '>
                 <div className='border pb-10'>
                     <h3 className='mb-25 ibarra-real'>Categorias</h3>
 
@@ -107,7 +107,7 @@ function NavBar({ setProdutos }) {
                     </nav>
 
                     <h3 className='mb-25 ibarra-real'>Ordenar Por</h3>
-                    <nav className='mb-40'>
+                    <nav className='filtros-list mb-40'>
                         <ul className='flex column pl-30 gap-25'>
                             <li>Categorias</li>
                             <li onClick={lowestPrice}>Menor preço</li>
@@ -118,7 +118,7 @@ function NavBar({ setProdutos }) {
                     </nav>
                 </div>
 
-                <div>
+                <div className='contacts'>
                     <div className="whats flex align-center pt-pb-20">
                         <div className="icon-whats">
                             <a href="https://web.whatsapp.com/send?phone=5563992139582" target="_blank">

@@ -1,0 +1,30 @@
+.coluna-menor {
+    margin: 0 30px;
+    padding: 20px 10px;
+}
+
+@media screen and (max-width: 735px) {
+    .coluna-menor {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+    }
+
+    .coluna-menor div {
+        border-bottom: 0;
+    }
+
+    .categories-list ul,
+    .filtros-list ul {
+        flex-direction: row;
+
+    }
+
+    .contacts,
+    h3 {
+        display: none;
+    }
+
+
+}

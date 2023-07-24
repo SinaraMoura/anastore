@@ -36,7 +36,7 @@ function Main() {
     return (
         <main className='main flex column'>
             <Header />
-            <div className='flex'>
+            <div className='content flex'>
                 <NavBar
                     setProdutos={setProdutos}
                 />
@@ -50,19 +50,21 @@ function Main() {
                         return (
                             <div key={produto.id} className='produto'>
                                 <h2 className='mb-20 ibarra-real'>{produto.secao}</h2>
-                                {produto.products.filter(item => {
-                                    return item.desc.toLowerCase().includes(valueInput.toLowerCase());
-                                }).map(produto => {
-                                    return <Card
-                                        key={produto.id}
-                                        img={produto.img}
-                                        desc={produto.desc}
-                                        categorie={produto.categorie}
-                                        price={produto.price}
-                                        onclick={() => clickCard(produto)}
-                                    />
+                                <div className='card-produtos space-around wrap'>
+                                    {produto.products.filter(item => {
+                                        return item.desc.toLowerCase().includes(valueInput.toLowerCase());
+                                    }).map(produto => {
+                                        return <Card
+                                            key={produto.id}
+                                            img={produto.img}
+                                            desc={produto.desc}
+                                            categorie={produto.categorie}
+                                            price={produto.price}
+                                            onclick={() => clickCard(produto)}
+                                        />
 
-                                })}
+                                    })}
+                                </div>
                             </div>
                         )
                     })}

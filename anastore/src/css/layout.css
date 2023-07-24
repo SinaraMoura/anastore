@@ -41,3 +41,7 @@
 .checked {
     position: absolute;
 }
+
+.wrap {
+    flex-wrap: wrap;
+}
