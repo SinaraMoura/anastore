@@ -4,12 +4,12 @@ import Header from '../header';
 import './styles.css';
 function OrderCard() {
     const { img, categorie, desc, price } = useContext(UserContext);
-    const message = 'Olá, gostaria de fazer um pedido da sua loja.';
+    const message = `Olá, gostaria de fazer pedido do item+${desc}.`;
 
     return (
         <>
             <Header />
-            <div className="payment flex space-around p-15 mt-20 grafik">
+            <div className="payment flex gap-50 align-center justify-content p-15 mt-20 grafik">
                 <div className='img-pay'>
                     <img src={img} alt="" />
                 </div>

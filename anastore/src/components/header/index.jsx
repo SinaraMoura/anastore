@@ -25,12 +25,12 @@ function Header() {
             <header className='header flex between align-center p-12'>
                 <div className="header-icon flex align-center justify-content mr-20" onClick={clickBack}>
                     {componentRender ?
-                        <img className="icon mr-10 pointer " src={back} alt="icone de busca" />
+                        <img className="icon-back icon mr-10 pointer " src={back} alt="icone de volta" />
                         :
                         <img className="seach icon transform mr-10 " src={search} alt="icone de busca" />
                     }
                     {componentRender ?
-                        <p className='pointer'>Voltar</p>
+                        <p className='back pointer'>Voltar</p>
                         :
                         <input value={valueInput} onChange={(e) => handleChange(e)}
                             className="input p-input box" type="text" placeholder="O que você procura?" />
