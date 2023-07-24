@@ -11,6 +11,7 @@ Site de catálogo virtual de uma loja de semijóias.
    - Filtrar produto por ordem alfabética de forma descrescente
    - Fazer pedido pelo WhatsApp
    - Scroll
+   - Responsividade
   
 a) Filtro por nome
 Para filtrar basta digitar o nome do produto na barra de busca e é listado apenas o produto correspondente.
@@ -23,13 +24,14 @@ Ao clicar no card do produto o usuário é redirecionado para a página `/order`
 Abaixo tem um botão, que ao ser clicado, redireciona o usuário para o whatsapp da vendedora.
 
 d) Scroll
-Obotão do scroll s[o aparece quando o usuário rola a tela. Ao clicar ele retorna para o início da página.
+O botão do scroll só aparece quando o usuário rola a tela. Ao clicar ele retorna para o início da página.
 
 ## Tecnologias utilizadas
   - ReactJs
   - Cors
   - ContextApi
   - React-router-dom
+  - CMS Prismic
 
 # Rodar projeto localmente
 #### clone o repositório 
