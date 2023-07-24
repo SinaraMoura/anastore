@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import { toast } from "react-toastify";
 import UserContext from "./context/UserContext";
 import Order from "./pages/Order";
 import Main from './pages/Main'
@@ -37,11 +38,9 @@ export default function MainRouter() {
                     })
                 }
                 ))
-
-                console.log(formattedData);
                 setAllProducts(formattedData);
             } catch (error) {
-                console.error('Error fetching data:', error);
+                toast.error(error?.response?.data?.message);
             }
         }
         fetchPrismic();

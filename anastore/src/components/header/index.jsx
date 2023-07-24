@@ -12,8 +12,11 @@ function Header() {
     function handleChange(event) {
         const content = event.target.value;
 
-        event.target.value = '';
         setValueInput(content);
+        event.target.value = " ";
+    }
+    function teclouEnter(tecla) {
+        return tecla === 'Enter';
     }
     function clickBack() {
         setComponentRender(false);

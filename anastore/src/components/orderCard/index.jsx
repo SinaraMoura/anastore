@@ -27,7 +27,6 @@ function OrderCard() {
                         PEDIR POR WHATSAPP
                     </a>
                 </div>
-
             </div>
         </>
     )
