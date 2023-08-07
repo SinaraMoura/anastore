@@ -25,7 +25,7 @@
     color: rgb(169, 177, 190);
 }
 
-.desc-pay {
+.title-pay {
     font-weight: 600;
     word-break: break-word;
     line-height: 1.3125rem;
@@ -38,6 +38,13 @@
     font-size: 0.875rem;
     padding-bottom: 24px;
     color: rgb(206, 125, 165);
+}
+
+.desc {
+    height: 150px;
+    line-height: 1.5625rem;
+    white-space: pre-wrap;
+    overflow-wrap: break-word
 }
 
 .button {

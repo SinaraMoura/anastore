@@ -10,9 +10,18 @@
     border-bottom: 2px solid #d9dce2
 }
 
+.menu {
+    display: none;
+
+}
+
 @media screen and (max-width: 735px) {
     .section-header {
         border-bottom: 0;
+    }
+
+    .menu {
+        display: block;
     }
 }
 

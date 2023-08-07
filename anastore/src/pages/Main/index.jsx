@@ -17,12 +17,13 @@ import { useNavigate } from 'react-router-dom';
 function Main() {
     const navigate = useNavigate()
     const [produtos, setProdutos] = useState([]);
-    const { allProducts, valueInput, setImg, setDesc, setCategorie, setPrice, setComponentRender } = useContext(UserContext);
+    const { allProducts, valueInput, setImg, setDesc, setCategorie, setPrice, setTitle, setComponentRender } = useContext(UserContext);
 
     function clickCard(card) {
         setImg(card.img);
         setCategorie(card.categorie);
         setDesc(card.desc);
+        setTitle(card.title)
         setPrice(card.price);
 
         setComponentRender(true);
@@ -57,8 +58,9 @@ function Main() {
                                         return <Card
                                             key={produto.id}
                                             img={produto.img}
-                                            desc={produto.desc}
+                                            title={produto.title}
                                             categorie={produto.categorie}
+                                            desc={produto.desc}
                                             price={produto.price}
                                             onclick={() => clickCard(produto)}
                                         />

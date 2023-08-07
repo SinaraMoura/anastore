@@ -3,8 +3,8 @@ import UserContext from '../../context/UserContext'
 import Header from '../header';
 import './styles.css';
 function OrderCard() {
-    const { img, categorie, desc, price } = useContext(UserContext);
-    const message = `Olá, gostaria de fazer pedido do item+${desc}.`;
+    const { img, categorie, title, price, desc } = useContext(UserContext);
+    const message = `Olá, gostaria de fazer pedido do item+${title}.`;
 
     return (
         <>
@@ -15,16 +15,17 @@ function OrderCard() {
                 </div>
                 <div className='info-pay flex column between'>
                     <div>
-                        <p className='categorie-pay uppercase'>{categorie}</p>
-                        <p className='desc-pay'>{desc}</p>
+                        <p className='categorie-pay uppercase mb-10'>{categorie}</p>
+                        <p className='title-pay'>{title}</p>
                         <p className='price-pay border'>{price}</p>
+                        <p className='desc mt-20 border'>{desc}</p>
                     </div>
 
                     <a className='button ' href={`https://wa.me/556163992139582?text=+${message}`} target="_blank">
                         <img className="img"
                             src="https://i.pinimg.com/originals/d9/d9/7d/d9d97d48264770f85d35c208f279152c.png"
                             alt="icone whatsapp" />
-                        PEDIR POR WHATSAPP
+                        Pedir por WhatsApp
                     </a>
                 </div>
             </div>
