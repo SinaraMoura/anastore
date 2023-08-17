@@ -42,7 +42,7 @@ function Header() {
                 </div>
 
                 <img className="logo mb-16 " src={logo} alt="logo" />
-                <button className='menu'>menu</button>
+
             </header>
         </section>
     )

@@ -7,6 +7,8 @@ import Main from './pages/Main'
 
 export default function MainRouter() {
     const [allProducts, setAllProducts] = useState([]);
+    const [modalCategories, setModalCategories] = useState(false);
+    const [modalFilter, setModalFilter] = useState(false);
     const [valueInput, setValueInput] = useState('');
     const [desc, setDesc] = useState('');
     const [title, setTitle] = useState('');
@@ -16,6 +18,8 @@ export default function MainRouter() {
     const [componentRender, setComponentRender] = useState(false);
     const valuesProviders = {
         allProducts, setAllProducts,
+        modalCategories, setModalCategories,
+        modalFilter, setModalFilter,
         valueInput, setValueInput, title, setTitle, desc, setDesc, categorie,
         setCategorie, price, setPrice, img, setImg, componentRender, setComponentRender
     };

@@ -45,7 +45,7 @@ function Main() {
                 <section className='coluna-maior p-12 public-sans'>
                     {produtos.filter(item => {
                         return item.products.some(product => {
-                            return product.desc.toLowerCase().includes(valueInput.toLowerCase());
+                            return product.title.toLowerCase().includes(valueInput.toLowerCase());
                         })
                     }).map(produto => {
                         return (
@@ -53,7 +53,7 @@ function Main() {
                                 <h2 className='mb-20 ibarra-real'>{produto.secao}</h2>
                                 <div className='card-produtos space-around wrap'>
                                     {produto.products.filter(item => {
-                                        return item.desc.toLowerCase().includes(valueInput.toLowerCase());
+                                        return item.title.toLowerCase().includes(valueInput.toLowerCase());
                                     }).map(produto => {
                                         return <Card
                                             key={produto.id}

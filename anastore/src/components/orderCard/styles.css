@@ -108,9 +108,7 @@
 
 @media screen and (max-width: 550px) {
 
-    .logo,
-    .back,
-    .icon-back {
+    .logo {
         display: none;
     }
 

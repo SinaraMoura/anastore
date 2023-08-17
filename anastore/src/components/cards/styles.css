@@ -30,20 +30,20 @@
 }
 
 @media screen and (max-width: 1030px) {
-    .produto-item {
+    /* .produto-item {
         width: 200px;
         height: 300px;
-    }
+    } */
 }
 
 @media screen and (max-width: 886px) {
-    .produto-item {
+    /* .produto-item {
         width: 150px;
         height: 250px;
-    }
+    } */
 
-    .categoria {
-        font-size: 10px;
+    /* .categoria {
+        font-size: 12px;
     }
 
     .title {
@@ -51,6 +51,6 @@
     }
 
     .price {
-        font-size: 15px;
-    }
+        font-size: 12px;
+    } */
 }

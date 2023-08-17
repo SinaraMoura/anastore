@@ -3,6 +3,21 @@
     padding: 20px 10px;
 }
 
+.btn {
+    display: none;
+    padding: 10px;
+}
+
+.btn-categories,
+.btn-filter {
+    all: unset;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f0c5db;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 735px) {
     .coluna-menor {
         margin: 0;
@@ -17,7 +32,7 @@
 
     .categories-list ul,
     .filtros-list ul {
-        flex-direction: row;
+        display: none;
     }
 
     .contacts,
