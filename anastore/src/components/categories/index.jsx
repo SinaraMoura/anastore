@@ -43,15 +43,13 @@ export default function Categories({ setProdutos }) {
     }
     return (
         <div>
-            <h3 className='mb-25 ibarra-real'>Categorias</h3>
-
             <nav className='categories-list mb-40'>
                 <ul className='flex column pl-30 gap-25'>
-                    <li onClick={showAll}>Tudo</li>
-                    <li onClick={earring}>Brincos</li>
-                    <li onClick={necklaces}>Colares</li>
-                    <li onClick={bracelets}>Pulseiras</li>
-                    <li onClick={kits}>Conjuntos</li>
+                    <li onClick={() => showAll()}>Tudo</li>
+                    <li onClick={() => earring()}>Brincos</li>
+                    <li onClick={() => necklaces()}>Colares</li>
+                    <li onClick={() => bracelets()}>Pulseiras</li>
+                    <li onClick={() => kits()}>Conjuntos</li>
                 </ul>
             </nav>
         </div>

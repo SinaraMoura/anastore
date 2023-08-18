@@ -54,7 +54,6 @@ export default function Filter({ setProdutos }) {
     }
     return (
         <div>
-            <h3 className='mb-25 ibarra-real'>Ordenar Por</h3>
             <nav className='filtros-list mb-40'>
                 <ul className='flex column pl-30 gap-25'>
                     <li onClick={lowestPrice}>Menor preço</li>

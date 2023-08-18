@@ -14,7 +14,7 @@
     box-sizing: border-box;
     border-radius: 8px;
     padding: 10px;
-    background-color: #f0c5db;
+    background-color: #ce7da5;
     cursor: pointer;
 }
 
@@ -23,7 +23,6 @@
         margin: 0;
         padding: 0;
         width: 100%;
-
     }
 
     .coluna-menor div {
@@ -33,6 +32,11 @@
     .categories-list ul,
     .filtros-list ul {
         display: none;
+    }
+
+    .btn {
+        display: flex;
+        margin: 0 0 30px 0;
     }
 
     .contacts,

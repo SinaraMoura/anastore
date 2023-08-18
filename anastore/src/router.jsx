@@ -9,6 +9,7 @@ export default function MainRouter() {
     const [allProducts, setAllProducts] = useState([]);
     const [modalCategories, setModalCategories] = useState(false);
     const [modalFilter, setModalFilter] = useState(false);
+    const [modal, setModal] = useState(false);
     const [valueInput, setValueInput] = useState('');
     const [desc, setDesc] = useState('');
     const [title, setTitle] = useState('');
@@ -18,6 +19,7 @@ export default function MainRouter() {
     const [componentRender, setComponentRender] = useState(false);
     const valuesProviders = {
         allProducts, setAllProducts,
+        modal, setModal,
         modalCategories, setModalCategories,
         modalFilter, setModalFilter,
         valueInput, setValueInput, title, setTitle, desc, setDesc, categorie,
@@ -50,7 +52,6 @@ export default function MainRouter() {
                 setAllProducts(formattedData);
             } catch (error) {
                 toast.error(error?.response?.data?.message);
-
             }
         }
         fetchPrismic();

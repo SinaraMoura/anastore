@@ -8,42 +8,34 @@ import ModalCategories from '../modals/modalCategories';
 import ModalFilter from '../modals/modalFilter';
 
 function NavBar({ setProdutos }) {
-    const { modalCategories, setModalCategories, modalFilter, setModalFilter } = useContext(UserContext);
+    const { setModalCategories, setModalFilter } = useContext(UserContext);
 
     function clickCategories() {
         setModalCategories(true)
     }
-    function closeCategories() {
-        setModalCategories(false)
-    }
+
     function clickFilter() {
         setModalFilter(true)
     }
-    function closeFilter() {
-        setModalFilter(false)
-    }
+
     return (
         <>
             <section className='coluna-menor '>
                 <div className='border pb-10'>
-                    <ModalCategories />
-                    <ModalFilter />
+                    <ModalCategories setProdutos={setProdutos} />
+                    <ModalFilter setProdutos={setProdutos} />
+
+                    <h3 className='mb-25 ibarra-real'>Categorias</h3>
                     <Categories setProdutos={setProdutos} />
+
+                    <h3 className='mb-25 ibarra-real'>Ordenar por</h3>
                     <Filter setProdutos={setProdutos} />
                 </div>
 
                 <Contacts />
-                <div className='btn flex gap-25'>
-                    {modalCategories ?
-                        <button className='btn-categories' onClick={() => closeCategories()} >Categorias</button>
-                        :
-                        <button className='btn-categories' onClick={() => clickCategories()} >Categorias</button>
-                    }
-                    {modalFilter ?
-                        <button className='btn-filter' onClick={() => clickFilter()}>Filtros</button>
-                        :
-                        <button className='btn-filter' onClick={() => closeFilter()}>Filtros</button>
-                    }
+                <div className='btn  gap-25'>
+                    <button className='btn-categories' onClick={() => clickCategories()} >Categorias</button>
+                    <button className='btn-filter' onClick={() => clickFilter()}>Filtros</button>
                 </div>
             </section>
         </>

@@ -1,3 +1,25 @@
 .modal-filter .filtros-list ul {
     display: block;
 }
+
+.modal-filter .filtros-list li {
+    padding: 15px;
+}
+
+.modal-filter {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(54, 63, 77, .3);
+}
+
+.item-modal {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+}

@@ -18,7 +18,7 @@ function OrderCard() {
                         <p className='categorie-pay uppercase mb-10'>{categorie}</p>
                         <p className='title-pay'>{title}</p>
                         <p className='price-pay border'>{price}</p>
-                        <p className='desc mt-20 border'>{desc}</p>
+                        <p className='desc mt-20 '>{desc}</p>
                     </div>
 
                     <a className='button ' href={`https://wa.me/556163992139582?text=+${message}`} target="_blank">

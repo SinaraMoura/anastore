@@ -2,13 +2,20 @@ import { useContext } from "react";
 import Categories from "../../categories";
 import UserContext from "../../../context/UserContext";
 import './styles.css'
-export default function ModalCategories() {
-    const { modalCategories } = useContext(UserContext)
+export default function ModalCategories({ setProdutos }) {
+    const { modalCategories, setModalCategories } = useContext(UserContext)
+    function closeModalCategories() {
+        setModalCategories(false)
+    }
     return (
-        <div className="modal-categories">
+        <>
             {modalCategories &&
-                <Categories />
+                <div className="modal-categories" onClick={() => closeModalCategories()}>
+                    <div className="item-modal">
+                        <Categories setProdutos={setProdutos} />
+                    </div>
+                </div>
             }
-        </div>
+        </>
     )
 }
